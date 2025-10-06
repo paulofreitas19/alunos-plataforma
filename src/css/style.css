@@ -1,0 +1,124 @@
+/* --- HEADER GERAL --- */
+.header {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 0 0 0;
+    gap: 26px;
+    height: 186px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.logo .img {
+    width: 60px;
+    display: inline-block;
+    transition: transform 0.8s ease-in-out;
+}
+
+.logo .img:hover {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 .5rem #D94444);
+}
+
+/* --- TEXTO DA LOGO COM UNDERLINE DE CARREGAMENTO --- */
+.logo .text {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    font-size: 11px;
+}
+
+.logo .text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #D94444;
+    transition: width 0.3s ease;
+}
+
+.logo .text:hover::after {
+    animation: loadingBar 1.2s forwards;
+}
+
+@keyframes loadingBar {
+    0% { width: 0; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0; left: 100%; }
+}
+
+.logo .title { color: #eee; }
+.logo .sub-title { color: #D94444; font-weight: 600; }
+
+/* --- MENU --- */
+.container-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.navegation {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    position: relative;
+}
+
+.menu .item {
+    padding: 20px 60px;
+    width: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.menu .item:hover { background-color: #eee; }
+
+.menu .item a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- UNDERLINE DESLIZANTE --- */
+.menu .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #D94444;
+    box-shadow: 0 0 8px #D94444, 0 0 16px #ff5e5e;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu .item:hover ~ .underline {
+    width: 100px;
+    transform: translateX(calc(var(--i) * 100%));
+}
+
+/* --- HERO --- */
+.main .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
