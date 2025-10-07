@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- Editable variables via CSS: change --accent to your desired red (e.g., #D94444) -->
+  <style>
+    :root { --accent: #D94444; }
+    .accent-stroke { stroke: var(--accent); }
+    .accent-fill { fill: var(--accent); }
+  </style>
+
+  <!-- Soft outer glow filter -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background is transparent; no rect -->
+
+  <!-- Group: standing developer with laptop, black body + red outline and glow -->
+  <g id="developer" filter="url(#glow)" fill="#0b0b0b" class="accent-stroke" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <path d="M640,250c0,66-54,120-120,120s-120-54-120-120 54-120 120-120 120,54 120,120z"/>
+    <!-- Neck -->
+    <path d="M510,370 L530,430 L590,430 L610,370"/>
+    <!-- Hoodie hood outline -->
+    <path d="M410,345
+             c-40,60 -40,140 -40,190
+             0,30 10,50 40,70
+             l60,40
+             c20,10 40,10 60,0
+             l60,-40
+             c30,-20 40,-40 40,-70
+             0,-50 0,-130 -40,-190" fill="none"/>
+    <!-- Torso (hoodie body) -->
+    <path d="M430,430
+             c-60,20 -100,80 -110,150
+             l-35,240
+             c-4,28 16,54 44,58
+             h0
+             c26,4 54,-16 58,-44
+             l26,-185
+             l40,0
+             l26,185
+             c4,28 32,48 58,44
+             h0
+             c28,-4 48,-30 44,-58
+             l-35,-240
+             c-10,-70 -50,-130 -110,-150
+             z"/>
+    <!-- Arms -->
+    <path d="M350,530
+             c-25,10 -40,30 -42,55
+             l-6,70
+             c-2,28 18,52 46,54
+             h0
+             c28,2 52,-18 54,-46
+             l5,-55
+             l50,-25" />
+    <path d="M674,530
+             c25,10 40,30 42,55
+             l6,70
+             c2,28 -18,52 -46,54
+             h0
+             c-28,2 -52,-18 -54,-46
+             l-5,-55
+             l-50,-25" />
+    <!-- Laptop -->
+    <g id="laptop" fill="#0b0b0b">
+      <path d="M360,540 h300 a14,14 0 0 1 14,14 v140 a14,14 0 0 1 -14,14 h-300 a14,14 0 0 1 -14,-14 v-140 a14,14 0 0 1 14,-14 z"/>
+      <path d="M320,708 h380 l38,52 h-456 z"/>
+      <!-- Screen UI lines -->
+      <g class="accent-stroke" stroke-width="6">
+        <path d="M392,580 h180"/>
+        <path d="M392,610 h220"/>
+        <path d="M392,640 h140"/>
+        <rect x="570" y="580" width="70" height="70" rx="8" fill="none"/>
+        <path d="M392,680 h150"/>
+      </g>
+    </g>
+    <!-- Hands on keyboard -->
+    <path d="M430,690 c-8,12 -8,26 0,36 10,14 26,16 40,8 l38,-22" />
+    <path d="M650,690 c8,12 8,26 0,36 -10,14 -26,16 -40,8 l-38,-22" />
+
+    <!-- Legs -->
+    <path d="M430,820 v140 c0,34 -28,62 -62,62h0 c-34,0 -62,-28 -62,-62 v-60"/>
+    <path d="M610,820 v140 c0,34 28,62 62,62h0 c34,0 62,-28 62,-62 v-60"/>
+    <!-- Shoes -->
+    <path d="M270,900 h120 v60 h-160 c0,-34 16,-52 40,-60z"/>
+    <path d="M630,900 h120 v60 h-160 c0,-34 16,-52 40,-60z"/>
+  </g>
+
+  <!-- Optional: subtle accent halo behind the figure -->
+  <circle cx="520" cy="620" r="380" class="accent-fill" opacity="0.08"/>
+</svg>
