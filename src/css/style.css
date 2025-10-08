@@ -87,7 +87,6 @@
 }
 
 .navegation {
-    box-shadow: #fff 0px 1px 4px;
     display: flex;
     justify-content: center;
     max-width: 640px;
@@ -116,6 +115,11 @@
     font-size: 13px;
     font-weight: 600;
     color: #333;
+    transition: .4s ease-in-out;
+}
+
+.menu .item a:hover {
+    color: #D94444;
 }
 
 /* --- UNDERLINE DESLIZANTE --- */
@@ -145,63 +149,79 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 760px;
+    height: 726px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #111;
-    gap: 80px;
+    gap: 120px;
 }
 
 .hero .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    width: 600px;
+    gap: 42px;
+    width: 460px;
 }
 
 .hero .content .headline,
 .text {
     text-align: center;
+    color: #fff;
+    transition: .8s ease-in-out;
 }
 
 .hero .content .headline {
     font-size: 32px;
     font-family: versa;
+}
+
+.hero .content .headline:hover {
     color: #D94444;
 }
 
 .hero .content .text {
     font-size: 14px;
-    color: #fff;
 }
 
-.hero .content .btn {
-    height: 50px;
-    width: 200px;
-    padding: 12px;
+.hero .content .text:hover {
+    color: #D94444;
+}
+
+.btn-cta {
+    position: relative;
+    display: inline-block;
+    padding: 14px 40px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+
+.btn-cta:hover {
+    border: 2px solid #D94444;
+    color: #D94444;
 }
 
 .hero .img {
     width: 250px;
-    transition: .9s ease-in-out;
+    transition: .8s ease-in-out;
 }
 
-.hero .img-left{
-    transform: rotateY(180deg);
+.hero .img-left {
     width: 264px;
     transition: .9s ease-in-out;
 }
 
-.float:hover{
+.float:hover {
     transition: transform 0.3s ease-in-out;
     animation: float 2.8s ease-in-out infinite;
     filter: drop-shadow(0 0 10px #D94444);
 }
 
-@keyframes float{
+@keyframes float {
 
     0%,
     100% {
@@ -212,21 +232,3 @@
         transform: translateY(-16px);
     }
 }
-
-.float-left:hover{
-    transition: transform 0.3s ease-in-out;
-    animation: float 2.8s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px #D94444);
-}
-
-/* @keyframes float-left{
-
-    0%,
-    100% {
-        transform: translateY(0px) rotateY(180deg);
-    }
-
-    50% {
-        transform: translateY(-16px) rotateY(180deg);
-    }
-} */
