@@ -271,6 +271,7 @@
     width: 302px;
     height: 453px;
     border: 2px solid #D94444;
+    transition: .8s ease-in-out;
 }
 
 .hero .headline,
@@ -299,12 +300,12 @@
 }
 
 .about .icon .img {
-    width: 34px;
+    width: 26px;
     transition: .8s ease-in-out;
 }
 
 .about .icon .text {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .about .container {
