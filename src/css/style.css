@@ -359,6 +359,43 @@
     animation-delay: 0.6s;
 }
 
+.hero .img-conego{
+    width: 700px;
+    border: 2px solid #D94444;
+}
+
+.hero .img-conego:hover{
+    animation: fadeInUp 1s ease forwards, float 2.8s ease-in-out infinite;
+}
+
+.footer{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 38px 0 0 0; */
+    gap: 50px;
+    height: 260px;
+}
+
+.footer span{
+    font-size: 11px;
+}
+
+.footer .social{
+    display: flex;
+    gap: 20px;
+}
+
+.footer .social svg{
+    transition: .8s ease-in-out;    
+}
+
+.footer .social svg:hover{
+    transform: rotate(360deg);
+}
+
 /* keyframes do fade */
 @keyframes fadeInUp {
     to {
