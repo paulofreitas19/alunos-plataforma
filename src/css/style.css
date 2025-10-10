@@ -150,7 +150,7 @@
 }
 
 /* --- HERO --- */
-.hero {
+.hero, .student {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +160,7 @@
     gap: 120px;
 }
 
-.hero .content {
+.hero .content, .student .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +184,7 @@
     transition: .8s ease-in-out;
 }
 
-.hero .headline {
+.hero .headline, .student .headline {
     font-size: 32px;
     font-family: "Playwrite DE Grund Guides", cursive;
     animation: fadeInUp 0.9s ease forwards;
@@ -247,7 +247,7 @@
     /* entra logo depois */
 }
 
-.programmer-left:hover{
+.programmer-left:hover {
     animation: float 2.8s ease-in-out infinite;
     opacity: 1;
 }
@@ -259,7 +259,7 @@
     /* entra logo depois */
 }
 
-.programmer-right:hover{
+.programmer-right:hover {
     animation: float 2.8s ease-in-out infinite;
     opacity: 1;
 }
@@ -281,7 +281,7 @@
     transition: .8s ease-in-out;
 }
 
-.about .container .img:hover{
+.about .container .img:hover {
     animation: fadeInUp 1s ease forwards, float 2.8s ease-in-out infinite;
     filter: drop-shadow(0 0 10px #D94444);
 }
@@ -303,7 +303,7 @@
     padding: 0 100px;
 }
 
-.about .icons:hover{
+.about .icons:hover {
     transition: .8s ease-in-out;
     animation: float 2.8s ease-in-out infinite;
 }
@@ -359,16 +359,39 @@
     animation-delay: 0.6s;
 }
 
-.hero .img-conego{
+/* estado inicial */
+.student .headline,
+.student .text,
+.student .btn-cta{
+    opacity: 0;
+    transform: translateY(30px);
+    /* todos começam levemente de baixo */
+}
+
+.student .img-conego {
     width: 700px;
     border: 2px solid #D94444;
 }
 
-.hero .img-conego:hover{
+.student .img-conego:hover {
     animation: fadeInUp 1s ease forwards, float 2.8s ease-in-out infinite;
 }
 
-.footer{
+.student .headline,
+.text {
+    text-align: center;
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+
+.student .text {
+    font-size: 14px;
+    animation: fadeInUp 0.9s ease forwards;
+    animation-delay: 0.6s;
+    /* entra depois do título */
+}
+
+.footer {
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -379,20 +402,20 @@
     height: 240px;
 }
 
-.footer span{
+.footer span {
     font-size: 12px;
 }
 
-.footer .social{
+.footer .social {
     display: flex;
     gap: 20px;
 }
 
-.footer .social svg{
-    transition: .8s ease-in-out;    
+.footer .social svg {
+    transition: .8s ease-in-out;
 }
 
-.footer .social svg:hover{
+.footer .social svg:hover {
     transform: rotate(360deg);
 }
 
