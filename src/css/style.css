@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund+Guides&display=swap');
 
+
 /* --- HEADER GERAL --- */
 .header {
     background-color: #111;
@@ -131,13 +132,14 @@
     margin-top: -30px;
 }
 
-/* --- TROCA DE PAINEL --- */
+/* comportamento de troca */
 .painel {
     display: none;
     opacity: 0;
     transition: opacity 0.6s ease;
 }
 
+/* painel ativo */
 .painel.selecionado {
     display: flex;
     align-items: center;
@@ -145,9 +147,11 @@
     opacity: 1;
 }
 
+
 /* --- HERO --- */
 .home,
 .student {
+
     height: 760px;
     width: 100%;
     background-color: #222;
@@ -163,40 +167,45 @@
     width: 460px;
 }
 
-/* estado inicial de textos */
+/* estado inicial */
 .home .headline,
 .home .text,
-.home .btn-cta,
-.about .headline,
-.about .text,
-.about .btn-cta,
-.student .headline,
-.student .text,
-.student .btn-cta {
+.home .btn-cta {
     opacity: 0;
     transform: translateY(30px);
+    /* todos começam levemente de baixo */
 }
 
-/* animação fade nos textos */
 .home .headline,
-.student .headline,
-.about .headline {
+.text {
     text-align: center;
     color: #fff;
-    font-size: 30px;
+    transition: .8s ease-in-out;
+}
+
+.home .headline,
+.student .headline {
+    font-size: 32px;
+    font-family: "Playwrite DE Grund Guides", cursive;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.2s;
+    /* começa quase de imediato */
 }
 
-.home .text,
-.about .text,
-.student .text {
-    text-align: center;
-    color: #fff;
+/* .hero .content .headline:hover {
+    color: #D94444;
+} */
+
+.home .text {
     font-size: 14px;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
+    /* entra depois do título */
 }
+
+/* .hero .content .text:hover {
+    color: #D94444;
+} */
 
 .btn-cta {
     position: relative;
@@ -208,6 +217,7 @@
     transition: .8s ease-in-out;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 1s;
+    /* entra por último */
 }
 
 .btn-cta:hover {
@@ -215,57 +225,162 @@
     color: #D94444;
 }
 
-/* --- IMAGENS HERO --- */
-.home .img,
-.about .container .img,
-.student .img-conego {
-    opacity: 0;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-/* fadeIn de cada imagem */
 .home .img {
     width: 250px;
-    animation: fadeIn 1.2s ease forwards;
-    animation-delay: 0.4s;
+    transition: .8s ease-in-out;
 }
 
 .home .img-left {
     width: 264px;
+    transition: .9s ease-in-out;
+}
+
+.float:hover {
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0 0 10px #D94444);
+}
+
+/* animação de entrada + flutuação */
+.programmer-left, .programmer-right{
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s, 1.8s;
+    /* entra logo depois */
+}
+
+.programmer-left:hover, .programmer-right:hover {
+    animation: float 2.8s ease-in-out infinite;
+}
+
+.about {
+    height: 760px;
+    background-color: #222;
+    gap: 140px;
 }
 
 .about .container .img {
     width: 302px;
     height: 453px;
     border: 2px solid #D94444;
-    animation: fadeIn 1.2s ease forwards;
-    animation-delay: 0.6s;
+    transition: .8s ease-in-out;
 }
 
-.student .img-conego {
-    width: 700px;
+.about .container .img:hover {
+    animation: fadeInUp 1s ease forwards, float 2.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px #D94444);
+}
+
+.about .headline,
+.about .text,
+.about .btn-cta {
+    opacity: 0;
+    transform: translateY(30px);
+    /* todos começam levemente de baixo */
+}
+
+.about .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    height: 100px;
     border: 2px solid #D94444;
-    animation: fadeIn 1.2s ease forwards;
-    animation-delay: 0.6s;
+    padding: 0 100px;
 }
 
-/* efeitos hover neon + flutuação */
-.float:hover,
-.programmer-left:hover,
-.programmer-right:hover,
-.about .container .img:hover,
-.student .img-conego:hover {
-    transform: translateY(-8px);
-    filter: drop-shadow(0 0 12px #D94444);
+.about .icons:hover {
+    transition: .8s ease-in-out;
+    animation: float 2.8s ease-in-out infinite;
 }
 
-/* --- FOOTER --- */
-.footer {
-    background-color: #000;
+.about .icon {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
+}
+
+.about .icon .img {
+    width: 26px;
+    transition: .8s ease-in-out;
+}
+
+.about .icon .text {
+    font-size: 11px;
+}
+
+.about .container {
+    display: flex;
+    gap: 130px;
+}
+
+.about .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 460px;
+}
+
+.about .headline,
+.text {
+    text-align: center;
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+
+.about .headline {
+    font-size: 30px;
+    font-family: "Parisienne", cursive;
+    animation: fadeInUp 0.9s ease forwards;
+    animation-delay: 0.2s;
+    /* começa quase de imediato */
+}
+
+.about .text {
+    font-size: 14px;
+    animation: fadeInUp 0.9s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* estado inicial */
+.student .headline,
+.student .text,
+.student .btn-cta {
+    opacity: 0;
+    transform: translateY(30px);
+    /* todos começam levemente de baixo */
+}
+
+.student .img-conego {
+    width: 740px;
+    border: 2px solid #D94444;
+}
+
+.student .img-conego:hover {
+    animation: fadeInUp 1s ease forwards, float 2.8s ease-in-out infinite;
+}
+
+.student .headline,
+.text {
+    text-align: center;
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+
+.student .text {
+    font-size: 14px;
+    animation: fadeInUp 0.9s ease forwards;
+    animation-delay: 0.6s;
+    /* entra depois do título */
+}
+
+.footer {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 38px 0 0 0; */
     gap: 50px;
     height: 240px;
 }
@@ -287,13 +402,24 @@
     transform: rotate(360deg);
 }
 
-/* --- ANIMAÇÕES --- */
 @keyframes loadingBar {
-    0% { width: 0; left: 0; }
-    50% { width: 100%; left: 0; }
-    100% { width: 0; left: 100%; }
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
 }
 
+/* keyframes do fade */
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -301,8 +427,15 @@
     }
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+/* keyframes da flutuação */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-16px);
     }
 }
