@@ -26,11 +26,13 @@
     width: 60px;
     display: inline-block;
     transition: transform 0.8s ease-in-out;
+    animation: logoLoad 1.5s ease forwards;
+    /* roda 1 vez ao carregar */
 }
 
-.logo .img:hover {
-    transform: rotate(360deg);
-    filter: drop-shadow(0 0 .5rem #D94444);
+/* Classe especial que dispara a animação */
+.logo .img.animate-once {
+  animation: logoLoad 1.5s ease forwards;
 }
 
 /* --- TEXTO DA LOGO COM UNDERLINE DE CARREGAMENTO --- */
@@ -241,13 +243,15 @@
 }
 
 /* animação de entrada + flutuação */
-.programmer-left, .programmer-right{
+.programmer-left,
+.programmer-right {
     animation: fadeInUp 1s ease forwards;
     animation-delay: 0.4s, 1.8s;
     /* entra logo depois */
 }
 
-.programmer-left:hover, .programmer-right:hover {
+.programmer-left:hover,
+.programmer-right:hover {
     animation: float 2.8s ease-in-out infinite;
 }
 
@@ -400,6 +404,40 @@
 
 .footer .social svg:hover {
     transform: rotate(360deg);
+}
+
+@keyframes logoLoad {
+    0% {
+        transform: rotate(0deg);
+        filter: drop-shadow(0 0 0 #D94444);
+    }
+
+    50% {
+        transform: rotate(360deg);
+        filter: drop-shadow(0 0 8px #D94444);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: drop-shadow(0 0 0 #D94444);
+    }
+}
+
+@keyframes underlineLoad {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
 }
 
 @keyframes loadingBar {
