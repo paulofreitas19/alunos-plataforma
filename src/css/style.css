@@ -40,7 +40,7 @@
     position: relative;
     cursor: pointer;
     display: flex;
-    gap: 4px;
+    gap: 6px;
     font-size: 11px;
 }
 
@@ -149,6 +149,20 @@
     opacity: 1;
 }
 
+.btn-cta {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 14px 40px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    transition: .8s ease-in-out;
+    animation: fadeInUp 0.9s ease forwards;
+    animation-delay: 1s;
+    /* entra por último */
+}
+
 
 /* --- HERO --- */
 .home,
@@ -165,7 +179,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 42px;
+    gap: 20px;
     width: 460px;
 }
 
@@ -186,40 +200,20 @@
 }
 
 .home .headline,
-.student .headline {
-    font-size: 32px;
-    font-family: "Playwrite DE Grund Guides", cursive;
+.student .headline{
+    color: #D94444;
+    font-size: 38px;
+    font-family: "Parisienne", cursive;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.2s;
     /* começa quase de imediato */
 }
 
-/* .hero .content .headline:hover {
-    color: #D94444;
-} */
-
 .home .text {
-    font-size: 14px;
+    font-size: 12px;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
     /* entra depois do título */
-}
-
-/* .hero .content .text:hover {
-    color: #D94444;
-} */
-
-.btn-cta {
-    position: relative;
-    display: inline-block;
-    padding: 14px 40px;
-    border: 2px solid #fff;
-    cursor: pointer;
-    color: #fff;
-    transition: .8s ease-in-out;
-    animation: fadeInUp 0.9s ease forwards;
-    animation-delay: 1s;
-    /* entra por último */
 }
 
 .btn-cta:hover {
@@ -259,6 +253,11 @@
     height: 760px;
     background-color: #222;
     gap: 140px;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
 }
 
 .about .container .img {
@@ -321,7 +320,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     width: 460px;
 }
 
@@ -333,7 +332,8 @@
 }
 
 .about .headline {
-    font-size: 30px;
+    color: #D94444;
+    font-size: 40px;
     font-family: "Parisienne", cursive;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.2s;
@@ -341,7 +341,7 @@
 }
 
 .about .text {
-    font-size: 14px;
+    font-size: 12px;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
 }
@@ -356,7 +356,7 @@
 }
 
 .student .img-conego {
-    width: 740px;
+    width: 660px;
     border: 2px solid #D94444;
 }
 
@@ -367,24 +367,92 @@
 .student .headline,
 .text {
     text-align: center;
-    color: #fff;
     transition: .8s ease-in-out;
 }
 
 .student .text {
-    font-size: 14px;
+    color: #fff;
+    font-size: 12px;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
     /* entra depois do título */
 }
 
-.footer {
+.faq {
+    /* display: flex; */
+    flex-direction: column;
+    padding: 150px 0;
+    background-color: #222;
+    gap: 40px;
+    height: 760px;
+}
+
+.faq .headline,
+.text {
+    text-align: center;
+    color: #fff;
+    transition: .8s ease-in-out;
+}
+
+.faq .headline{
+    font-family: "Parisienne", cursive;
+    color: #D94444;
+    font-size: 40px;
+}
+
+.faq .questions{
+    display: flex;
+    max-width: 1300px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.faq .question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: 400px;
+    gap: 32px;
+    padding: 20px;
+    border: 2px solid #111;
+    transition: .7s ease-in-out;
+}
+
+.faq .question:hover{
+    border: 2px solid #D94444;
+}
+
+.faq .title{
+    color: #222;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    font-size: 11.5px;
+    transition: .4s ease-in-out;
+    text-align: center;
+    background-color: #fff;
+}
+
+.faq .text{
+    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.faq .text:hover{
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* .footer {
     background-color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 38px 0 0 0; */
     gap: 50px;
     height: 240px;
 }
@@ -404,7 +472,7 @@
 
 .footer .social svg:hover {
     transform: rotate(360deg);
-}
+} */
 
 @keyframes logoLoad {
     0% {
