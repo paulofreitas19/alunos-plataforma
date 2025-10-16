@@ -1,0 +1,98 @@
+@media(max-width: 624px) {
+    .logo .text {
+        font-size: 9.4px;
+    }
+
+    .menu .item {
+        width: 50px;
+        padding: 16px 38px;
+    }
+
+    .menu .item a {
+        font-size: 11px;
+    }
+
+    .btn-cta {
+        font-size: 11.5px;
+    }
+
+    .home,
+    .about,
+    .student,
+    .faq {
+        min-height: 100vh;
+        min-width: 100vw;
+        flex-direction: column;
+        gap: 0;
+        background-color: #222;
+    }
+
+    .home .text,
+    .about .text,
+    .student .text,
+    .faq .text {
+        font-size: 9.8px;
+    }
+
+    .home .content,
+    .about .content {
+        padding: 70px;
+    }
+
+    .home .img-left {
+        display: none;
+    }
+
+    .home .img-left,
+    .home .img,
+    .about .img {
+        width: 190px;
+    }
+
+    .about .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about .container .content,
+    .student .content {
+        padding: 0 60px;
+    }
+
+    .about .container .img {
+        width: 250px;
+        height: 283px;
+        margin-top: 60px;
+    }
+
+    .student .img-conego {
+        width: 305px;
+        margin-bottom: 60px;
+    }
+
+    .faq {
+        padding: 120px 20px 40px 20px;
+        /* 120px para "respeitar" o cabeçalho */
+        min-height: 100vh;
+        background-color: #222;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .faq .headline {
+        font-size: 32px;
+    }
+
+    .faq .questions {
+        align-items: center;
+    }
+
+}
+
+@media(min-width: 625px) and (max-width: 1024px){
+    .faq .questions{
+        justify-content: center;
+    }
+}

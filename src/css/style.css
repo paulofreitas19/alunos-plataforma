@@ -223,12 +223,14 @@
 
 .home .img {
     width: 250px;
-    transition: .8s ease-in-out;
+    transition: .9s ease-in-out;
+    transform: translateY(30px);
 }
 
 .home .img-left {
     width: 264px;
     transition: .9s ease-in-out;
+    transform: translateY(30px);
 }
 
 .float:hover {
@@ -236,14 +238,25 @@
     filter: drop-shadow(0 0 10px #D94444);
 }
 
-/* animação de entrada + flutuação */
+/* estado inicial das imagens */
 .programmer-left,
 .programmer-right {
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.4s, 1.8s;
-    /* entra logo depois */
+    /* opacity: 0; */
+    transform: translateY(30px);
 }
 
+/* ajustes de delay individuais */
+.img-left.programmer-left {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.img.programmer-right {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* no hover só aplica a flutuação, sem resetar opacidade */
 .programmer-left:hover,
 .programmer-right:hover {
     animation: float 2.8s ease-in-out infinite;
@@ -261,10 +274,13 @@
 }
 
 .about .container .img {
-    width: 302px;
-    height: 453px;
+    width: 400px;
+    height: 452px;
     border: 2px solid #D94444;
     transition: .8s ease-in-out;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .about .container .img:hover {
@@ -358,6 +374,9 @@
 .student .img-conego {
     width: 660px;
     border: 2px solid #D94444;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .student .img-conego:hover {
@@ -384,12 +403,13 @@
     padding: 150px 0;
     background-color: #222;
     gap: 40px;
-    height: 760px;
+    height: auto;
+    min-height: 100vh;
 }
 
 .faq .headline,
 .faq .text,
-.faq .btn-cta {
+.faq .title {
     opacity: 0;
     transform: translateY(30px);
     /* todos começam levemente de baixo */
@@ -456,7 +476,6 @@
 
 .faq .text:hover{
     color: #fff;
-    font-size: 11px;
     font-weight: 600;
 }
 
