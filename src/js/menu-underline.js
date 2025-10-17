@@ -1,5 +1,5 @@
 // Seleciona os itens do menu e a underline
-const menuItems = document.querySelectorAll('.menu .item');
+const menuItems = document.querySelectorAll('.menu a');
 const underline = document.querySelector('.menu .underline');
 
 // Para garantir que a underline apareça com animação suave
