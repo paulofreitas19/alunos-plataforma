@@ -86,13 +86,20 @@
         margin-bottom: 20px;
     }
 
+    .faq .questions {
+        align-items: center;
+    }
+
     .faq .question {
         width: 340px;
     }
 
-    .faq .questions {
-        align-items: center;
+    .faq .title{
+        font-size: 9px;
+        height: 34px;
     }
+
+    
 
 }
 
