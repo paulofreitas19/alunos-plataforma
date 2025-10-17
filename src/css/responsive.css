@@ -78,15 +78,16 @@
     }
 
     .faq.painel.selecionado {
-    display: flex;
-    opacity: 1;
-}
+        display: flex;
+        opacity: 1;
+    }
 
     .faq .headline {
         font-size: 32px;
+        margin-bottom: 20px;
     }
 
-    .faq .question{
+    .faq .question {
         width: 340px;
     }
 
@@ -96,8 +97,8 @@
 
 }
 
-@media(min-width: 625px) and (max-width: 1024px){
-    .faq .questions{
+@media(min-width: 625px) and (max-width: 1024px) {
+    .faq .questions {
         justify-content: center;
     }
 }
