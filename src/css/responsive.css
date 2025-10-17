@@ -20,11 +20,10 @@
     .about,
     .student,
     .faq {
-        min-height: 100vh;
-        min-width: 100vw;
         flex-direction: column;
-        gap: 0;
+        gap: 40px;
         background-color: #222;
+        padding-bottom: 40px;
     }
 
     .home .text,
@@ -36,7 +35,7 @@
 
     .home .content,
     .about .content {
-        padding: 70px;
+        padding: 0 70px;
     }
 
     .home .img-left {
@@ -71,18 +70,24 @@
     }
 
     .faq {
-        padding: 120px 20px 40px 20px;
         /* 120px para "respeitar" o cabeçalho */
-        min-height: 100vh;
         background-color: #222;
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
+    .faq.painel.selecionado {
+    display: flex;
+    opacity: 1;
+}
+
     .faq .headline {
         font-size: 32px;
+    }
+
+    .faq .question{
+        width: 340px;
     }
 
     .faq .questions {

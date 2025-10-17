@@ -56,5 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  
+  function setTopHeights() {
+    const root = document.documentElement;
+    const header = document.querySelector('.header')?.offsetHeight || 0;
+    const nav = document.querySelector('.container-nav')?.offsetHeight || 0;
+    root.style.setProperty('--header-h', header + 'px');
+    root.style.setProperty('--nav-h', nav + 'px');
+  }
+  window.addEventListener('load', setTopHeights);
+  window.addEventListener('resize', setTopHeights);
 });

@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund+Guides&display=swap');
 
+html,
+body {
+    height: 100%;
+    background: #222;
+    /* igual às seções */
+}
 
 /* --- HEADER GERAL --- */
 .header {
@@ -32,7 +38,7 @@
 
 /* Classe especial que dispara a animação */
 .logo .img.animate-once {
-  animation: logoLoad 1.5s ease forwards;
+    animation: logoLoad 1.5s ease forwards;
 }
 
 /* --- TEXTO DA LOGO COM UNDERLINE DE CARREGAMENTO --- */
@@ -138,6 +144,8 @@
 .painel {
     display: none;
     opacity: 0;
+    height: auto;
+    min-height: auto;
     transition: opacity 0.6s ease;
 }
 
@@ -147,6 +155,17 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
+    /* min-height: 100vh; */
+    /* ocupa a tela cheia somente quando ativo */
+}
+
+/* Ajuste especial para FAQ */
+.faq.painel.selecionado {
+    display: flex;
+    /* fica visível apenas quando selecionado */
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 100vh; */
 }
 
 .btn-cta {
@@ -165,10 +184,17 @@
 
 
 /* --- HERO --- */
+
+/* a seção que contém os painéis */
+.hero {
+    min-height: calc(100vh - var(--top-h));
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
 .home,
 .student {
-
-    height: 760px;
     width: 100%;
     background-color: #222;
     gap: 120px;
@@ -200,7 +226,7 @@
 }
 
 .home .headline,
-.student .headline{
+.student .headline {
     color: #D94444;
     font-size: 38px;
     font-family: "Parisienne", cursive;
@@ -263,12 +289,11 @@
 }
 
 .about {
-    height: 760px;
     background-color: #222;
     gap: 140px;
 }
 
-.about .container{
+.about .container {
     display: flex;
     align-items: center;
 }
@@ -398,13 +423,9 @@
 }
 
 .faq {
-    /* display: flex; */
-    flex-direction: column;
-    padding: 150px 0;
     background-color: #222;
-    gap: 40px;
-    height: auto;
-    min-height: 100vh;
+    /* padding: 60px 20px; */
+
 }
 
 .faq .headline,
@@ -422,38 +443,42 @@
     transition: .8s ease-in-out;
 }
 
-.faq .headline{
+.faq .headline {
     font-family: "Parisienne", cursive;
     color: #D94444;
     font-size: 40px;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.2s;
+    margin-bottom: 32px;
 }
 
-.faq .questions{
+.faq .questions {
     display: flex;
     max-width: 1300px;
-    gap: 50px;
+    gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.faq .question{
+.faq .question {
+    
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 200px;
-    width: 400px;
-    gap: 32px;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
     border: 2px solid #111;
-    transition: .7s ease-in-out;
+    padding: 20px;
+    width: 400px;
+    /* mantém no centro */
+    margin: 0 auto;
+
 }
 
-.faq .question:hover{
+.faq .question:hover {
     border: 2px solid #D94444;
 }
 
-.faq .title{
+.faq .title {
     color: #222;
     font-weight: 600;
     padding: 12px;
@@ -466,7 +491,7 @@
     animation-delay: 0.4s;
 }
 
-.faq .text{
+.faq .text {
     color: #999;
     font-size: 11px;
     font-weight: 600;
@@ -474,7 +499,7 @@
     animation-delay: 0.6s;
 }
 
-.faq .text:hover{
+.faq .text:hover {
     color: #fff;
     font-weight: 600;
 }
