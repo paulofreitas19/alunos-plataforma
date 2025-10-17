@@ -478,6 +478,11 @@ body {
     border: 2px solid #D94444;
 }
 
+.faq .question:hover .text{
+    color: #fff;
+    font-weight: 600;
+}
+
 .faq .title {
     color: #222;
     font-weight: 600;
@@ -498,12 +503,6 @@ body {
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
 }
-
-.faq .text:hover {
-    color: #fff;
-    font-weight: 600;
-}
-
 
 /* .footer {
     background-color: #111;
