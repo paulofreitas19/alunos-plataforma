@@ -11,14 +11,16 @@
     <link rel="icon" href="./src/img/logo-red.png" type="image/x-icon" />
 
     <!-- Meta padrão -->
-  <meta name="description" content="Conheça os alunos desenvolvedores da Escola Cônego José Eugênio de Faria. Jovens talentos em sistemas, design e jogos digitais, prontos para o mercado.">
+    <meta name="description"
+        content="Conheça os alunos desenvolvedores da Escola Cônego José Eugênio de Faria. Jovens talentos em sistemas, design e jogos digitais, prontos para o mercado.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Plataforma de Alunos - Desenvolvedores da Cônego" />
-  <meta property="og:description" content="Conheça os alunos desenvolvedores da Escola Cônego José Eugênio de Faria. Jovens talentos prontos para transformar ideias em realidade." />
-  <meta property="og:image" content="https://paulofreitas19.github.io/alunos-plataforma/src/img/preview.png" />
-  <meta property="og:url" content="https://paulofreitas19.github.io/alunos-plataforma/" />
-  <meta property="og:type" content="website" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Plataforma de Alunos - Desenvolvedores da Cônego" />
+    <meta property="og:description"
+        content="Conheça os alunos desenvolvedores da Escola Cônego José Eugênio de Faria. Jovens talentos prontos para transformar ideias em realidade." />
+    <meta property="og:image" content="https://paulofreitas19.github.io/alunos-plataforma/src/img/preview.png" />
+    <meta property="og:url" content="https://paulofreitas19.github.io/alunos-plataforma/" />
+    <meta property="og:type" content="website" />
 </head>
 
 <body>
@@ -35,17 +37,25 @@
     <div class="container-nav">
         <nav class="navegation">
             <ul class="menu">
-                <a href="#" data-target="home"><li class="item selecionada" style="--i:0">HOME</li></a>
-                <a href="#" data-target="about"><li class="item" style="--i:1">SOBRE</li></a>
-                <a href="#" data-target="student"><li class="item" style="--i:2">ESCOLA</li></a>
-                <a href="#" data-target="faq"><li class="item" style="--i:3">FAQ</li></a>
+                <a href="#" data-target="home">
+                    <li class="item selecionada" style="--i:0">HOME</li>
+                </a>
+                <a href="#" data-target="about">
+                    <li class="item" style="--i:1">SOBRE</li>
+                </a>
+                <a href="#" data-target="student">
+                    <li class="item" style="--i:2">ESCOLA</li>
+                </a>
+                <a href="#" data-target="faq">
+                    <li class="item" style="--i:3">FAQ</li>
+                </a>
                 <span class="underline"></span>
             </ul>
         </nav>
     </div>
 
     <main class="main">
-        <section class="hero">
+        <section class="hero bg">
             <div class="home painel selecionado" id="painel-home">
                 <img src="./src/img/man-programmer.png" alt="" class="img-left float programmer-left">
                 <div class="content">
@@ -160,6 +170,9 @@
             </div>
         </div>
     </footer> -->
+
+    <canvas id="bgParticles"></canvas>
+    <script src="./src/js/particles.js"></script>
 
     <script src="./src/js/menu-underline.js"></script>
     <script src="./src/js/hero-painels.js"></script>

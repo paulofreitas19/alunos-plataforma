@@ -5,7 +5,11 @@
 html,
 body {
     height: 100%;
-    background: #222;
+    
+    /* background-image: url('../img/bg-dark.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
     /* igual às seções */
 }
 
@@ -182,6 +186,11 @@ body {
     /* entra por último */
 }
 
+/* Garanta que o conteúdo fique acima do canvas */
+.header, .container-nav, .main {
+  position: relative;
+  z-index: 1;
+}
 
 /* --- HERO --- */
 
@@ -193,10 +202,20 @@ body {
     margin-top: 100px;
 }
 
+/* Canvas ocupa a tela toda e fica atrás do conteúdo, porém visível */
+#bgParticles{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;                 /* em vez de -1 */
+  background: #222;           /* cor-base do site */
+}
+
 .home,
 .student {
     width: 100%;
-    background-color: #222;
+    /* background-color: #222; */
     gap: 120px;
 }
 
@@ -288,10 +307,6 @@ body {
     animation: float 2.8s ease-in-out infinite;
 }
 
-.about {
-    background-color: #222;
-    gap: 140px;
-}
 
 .about .container {
     display: flex;
@@ -420,12 +435,6 @@ body {
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
     /* entra depois do título */
-}
-
-.faq {
-    background-color: #222;
-    /* padding: 60px 20px; */
-
 }
 
 .faq .headline,
