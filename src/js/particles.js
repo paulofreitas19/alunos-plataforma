@@ -1,5 +1,4 @@
-// src/js/particles.js
-(() => {
+export function initParticles() {
   const canvas = document.getElementById("bgParticles");
   if (!canvas) return;
 
@@ -88,5 +87,5 @@
     requestAnimationFrame(animate);
   }
 
-  animate(); // MUITO IMPORTANTE: inicia a animação
-})();
+  animate(); // inicia a animação
+}
