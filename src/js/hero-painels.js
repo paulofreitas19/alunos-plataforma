@@ -23,13 +23,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function pulseSubtitle() {
     const subtitle = document.querySelector('.logo .text');
     if (!subtitle) return;
-    subtitle.style.animation = 'none';
+
+    // remove a classe, se já tiver
+    subtitle.classList.remove('animate-underline');
+
+    // força reflow para reiniciar
     void subtitle.offsetWidth;
-    subtitle.style.animation = 'underlineLoad 1.2s forwards';
+
+    // adiciona a classe que anima o ::after
+    subtitle.classList.add('animate-underline');
+
+    // remove depois que terminar a animação
     subtitle.addEventListener('animationend', () => {
-      subtitle.style.animation = '';
+      subtitle.classList.remove('animate-underline');
     }, { once: true });
   }
+
+  // 🔹 dispara assim que a página carregar
+  window.addEventListener('DOMContentLoaded', () => {
+    pulseSubtitle();
+  });
+
+  // 🔹 também dispara quando clicar no menu
+  document.querySelectorAll('.menu .item a').forEach(link => {
+    link.addEventListener('click', () => {
+      pulseSubtitle();
+    });
+  });
 
 
   function selectMenuItem(li, a) {
@@ -48,6 +68,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active) active.classList.remove('selecionado');
     newPanel.classList.add('selecionado');
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const subtitle = document.querySelector(".logo .text");
+    const menuItems = document.querySelectorAll(".menu .item a");
+
+    // 🔹 animação inicial ao carregar
+    subtitle.classList.add("animate-underline");
+
+    // 🔹 remove a classe ao terminar, para poder reusar depois
+    subtitle.addEventListener("animationend", () => {
+      subtitle.classList.remove("animate-underline");
+    });
+
+    // 🔹 ao clicar em item do menu, dispara a animação novamente
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        subtitle.classList.add("animate-underline");
+      });
+    });
+  });
 
   // delegação de eventos: funciona clicando no <a> ou em filhos dele
   menu.addEventListener('click', (e) => {

@@ -54,7 +54,6 @@ body {
     font-size: 11px;
 }
 
-/* Linha animada do subtítulo */
 .logo .text::after {
     content: "";
     position: absolute;
@@ -63,8 +62,13 @@ body {
     width: 0;
     height: 2px;
     background-color: #D94444;
-    animation: underlineLoad 1.2s forwards; /* animação automática */
 }
+
+/* classe que dispara a animação */
+.logo .text.animate-underline::after {
+    animation: underlineLoad 1.2s forwards;
+}
+
 
 .logo .title {
     color: #eee;
