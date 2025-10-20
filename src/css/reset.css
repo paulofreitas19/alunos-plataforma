@@ -13,3 +13,8 @@ a {
 ul {
     list-style: none;
 }
+
+::selection {
+  background-color: #D94444; /* fundo da seleção */
+  color: #fff;              /* cor do texto selecionado */
+}

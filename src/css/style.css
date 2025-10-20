@@ -54,6 +54,7 @@ body {
     font-size: 11px;
 }
 
+/* Linha animada do subtítulo */
 .logo .text::after {
     content: "";
     position: absolute;
@@ -62,11 +63,7 @@ body {
     width: 0;
     height: 2px;
     background-color: #D94444;
-    transition: width 0.3s ease;
-}
-
-.logo .text:hover::after {
-    animation: loadingBar 1.2s forwards;
+    animation: underlineLoad 1.2s forwards; /* animação automática */
 }
 
 .logo .title {

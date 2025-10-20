@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   }
 
+  function pulseSubtitle() {
+    const subtitle = document.querySelector('.logo .text');
+    if (!subtitle) return;
+    subtitle.style.animation = 'none';
+    void subtitle.offsetWidth;
+    subtitle.style.animation = 'underlineLoad 1.2s forwards';
+    subtitle.addEventListener('animationend', () => {
+      subtitle.style.animation = '';
+    }, { once: true });
+  }
+
+
   function selectMenuItem(li, a) {
     document.querySelectorAll('.menu .item.selecionada').forEach(el => el.classList.remove('selecionada'));
     document.querySelectorAll('.menu a.selecionada').forEach(el => el.classList.remove('selecionada'));
@@ -48,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // reanima o logo no clique
     pulseLogoInline();
+    pulseSubtitle();
 
     // troca de painel
     if (!li?.classList.contains('selecionada')) {
