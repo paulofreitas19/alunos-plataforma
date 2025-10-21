@@ -558,11 +558,11 @@ body {
 }
 
 .student .icon{
-    width: 60px;
-    transition: .4s ease-in-out;
+    width: 80px;
+    transition: .5s ease-in-out;
 }
 
-.student .icon:hover{
+.student .icons .icon:hover{
     border: 2px solid #D94444;
     scale: 1.3;
 }
