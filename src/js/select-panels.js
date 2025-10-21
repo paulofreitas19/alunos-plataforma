@@ -40,5 +40,6 @@ export function initSelectPanels() {
       selectMenuItem(li, a);
       showPanel(target);
     }
+    
   });
 }
