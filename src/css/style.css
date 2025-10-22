@@ -558,7 +558,8 @@ body {
 
 .student .icons .icon:hover{
     border: 2px solid #D94444;
-    scale: 1.15;
+    filter: drop-shadow(0 0 10px #D94444);
+    scale: 1.13;
 }
 
 .student .card{
@@ -574,10 +575,6 @@ body {
 .card .img{
     width: 100%;
     border: 2px solid #D94444;
-    transition: .5s ease-in-out;
-}
-
-.card .img:hover{
     filter: drop-shadow(0 0 10px #D94444);
 }
 
