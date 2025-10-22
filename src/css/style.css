@@ -143,7 +143,7 @@ body {
 }
 
 .main {
-    margin-top: -30px;
+    margin-top: -50px;
 }
 
 /* comportamento de troca */
@@ -522,12 +522,6 @@ body {
     animation-delay: 0.6s;
 }
 
-.student {
-    display: flex;
-    justify-content: space-between;
-    gap: 120px
-}
-
 .student .devs{
     display: flex;
     flex-direction: column;
@@ -558,7 +552,7 @@ body {
 }
 
 .student .icon{
-    width: 80px;
+    width: 70px;
     transition: .5s ease-in-out;
 }
 
@@ -580,6 +574,11 @@ body {
 .card .img{
     width: 100%;
     border: 2px solid #D94444;
+    transition: .5s ease-in-out;
+}
+
+.card .img:hover{
+    filter: drop-shadow(0 0 10px #D94444);
 }
 
 .card .content{
@@ -602,7 +601,7 @@ body {
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.4s;
     margin-top: 42px;
-    font-family: montserrat;
+    font-family: montserrat, monospace;
 }
 
 .card .text{
