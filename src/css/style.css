@@ -522,6 +522,10 @@ body {
     animation-delay: 0.6s;
 }
 
+.student{
+    gap: 100px;
+}
+
 .student .devs{
     display: flex;
     flex-direction: column;
@@ -551,15 +555,37 @@ body {
     gap: 18px;
 }
 
-.student .icon{
+.student .icons .icon{
     width: 70px;
     transition: .5s ease-in-out;
+    border: 1.5px solid #444;
 }
 
 .student .icons .icon:hover{
-    border: 2px solid #D94444;
+    border: 1.5px solid #D94444;
     filter: drop-shadow(0 0 10px #D94444);
     scale: 1.13;
+}
+
+.cards {
+  position: relative;
+  width: 500px;
+  height: 620px;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.card.selecionado {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 .student .card{
@@ -569,7 +595,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
+    padding: 38px;
 }
 
 .card .img{

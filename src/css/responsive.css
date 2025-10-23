@@ -102,6 +102,9 @@
 }
 
 @media(min-width: 625px) and (max-width: 1024px) {
+
+    
+
     .faq .questions {
         justify-content: center;
     }
