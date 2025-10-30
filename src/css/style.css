@@ -636,12 +636,17 @@ body {
 }
 
 .card .text{
-    color: #FFF;
+    color: #999;
     font-size: 12px;
     font-weight: 600;
     animation: fadeInUp 0.9s ease forwards;
     animation-delay: 0.6s;
     margin: 12px 0;
+}
+
+.card:hover .text {
+    color: #fff;
+    font-weight: 600;
 }
 
 .card .social{
